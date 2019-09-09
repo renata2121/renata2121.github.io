@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS</title>
+	<style>
+		@font-face {
+			font-family: InputMono;
+			src: url(../font/InputMono-Regular.ttf) format("TrueType"), url(../font/InputMono-Regular.eot) format("Embedded OpenType"), url(../font/InputMono-Regular.woff) format("woff");
+			font-style: normal;
+			font-weight: 400;
+		}
+		@font-face {
+			font-family: InputMono;
+			src: url(../font/InputMono-ThinItalic.ttf) format("TrueType"), url(../font/InputMono-ThinItalic.eot) format("Embedded OpenType"), url(../font/InputMono-ThinItalic.woff) format("woff");
+			font-style: italic;
+			font-weight: 100;
+		}
+		* {
+			color: blue;
+		}
+		body {
+			background-color: lightgrey;
+			background-image: url(wolf.jpg);
+			background-repeat: no-repeat;
+			/*background-position: bottom right;*/
+			/*background-position: 200px 50px;*/
+			background-position: center;
+			background-attachment: fixed;
+			/*background-size: 1000px;*/
+			background-size: contain;
+			background: violet /*url(wolf.jpg)*/ no-repeat center / contain fixed;
+		}
+		h1 {
+			color: forestgreen;
+			font-variant: small-caps;
+			font-size: 50px;
+			font-family: Verdana, "Segoe Print", sans-serif;
+			font: italic small-caps 100 50px / 2 Verdana, "Segoe Print", sans-serif;
+			text-align: center;
+			text-decoration: underline;
+			text-transform: capitalize;
+		}
+		h1.txt-orange {
+			color: #fff;
+		}
+		h2 {
+			/*color: rgb(15,75,33);*/
+			color: rgb(202,91,225);
+			color: #00ff00; /*rgb(0,255,0), lime*/
+			font-weight: 100; /*lighter*/
+		}
+		
+		#paragraph {
+			color: cyan;
+		}
+		.txt-orange {
+			color: rgb(255,128,0);
+			font-style: italic;
+		}
+		.bg-lime {
+			background-color: #00ff00;
+		}
+		p {
+			color: #ff50a7;
+			font-size: 20px;
+			line-height: 2; /*40px*/
+			font-family: InputMono;
+		}
+		ul {
+			list-style-type: square;
+		}
+		ol {
+			list-style-type: lower-greek;
+		}
+		ol ul {
+			list-style-type: none;
+		}
+		table, td, th {
+			border-style: solid;
+		}
+	</style>
+</head>
+<body>
+	<a href="">
+		<img src="wolf.svg" alt="Логотип" height="60">
+	</a>
+	<h1 class="txt-orange">Каскадные таблицы стилей</h1>
+	<table>
+		<caption>Моя первая таблица!</caption>
+		<tr>
+			<th>Ячейка 1</th>
+			<td>Ячейка 2</td>
+			<td colspan="3" rowspan="2">Ячейка 3</td>
+		</tr>
+		<tr>
+			<th>4</th>
+			<td rowspan="2">Большая ячейка!</td>
+		</tr>
+		<tr>
+			<th>Яч 1</th>
+			<td>Яч 2</td>
+			<td>Яч 3</td>
+			<td>Яч 4</td>
+		</tr>
+	</table>
+	<img src="wolf.jpg" alt="Снежный волк">
+	<table>
+		<tr>
+			<td>Ячейка 1</td>
+			<td>Ячейка 2</td>
+			<td>Ячейка 3</td>
+			<td>Ячейка 4</td>
+		</tr>
+		<tr>
+			<td>Ячейка 1</td>
+			<td colspan="2" rowspan="2">Ячейка 2</td>
+			<td>Ячейка 4</td>
+		</tr>
+		<tr>
+			<td>Ячейка 1</td>
+			<td>Ячейка 4</td>
+		</tr>
+		<tr>
+			<td>Ячейка 1</td>
+			<td>Ячейка 2</td>
+			<td>Ячейка 3</td>
+			<td>Ячейка 4</td>
+		</tr>
+	</table>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. <span class="txt-orange bg-lime">Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur.</span> Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut <img src="wolf.png" alt="Волк из мультфильма 'Пёс и волк'" width="100" height="50"> labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p id="paragraph" class="txt-orange bg-lime" style="color:red;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h2>Еще один заголовок</h2>
+	<p class="txt-orange">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<h2>Список покупок</h2>
+	<ul>
+		<li>Памперсы</li>
+		<li>Биолакт</li>
+		<li>Масло - 3 шт.!</li>
+		<li>Покормить машину (Porsche)</li>
+		<li>Пивасик</li>
+	</ul>
+	<h2>Дела на вечер</h2>
+	<ol>
+		<li>Позвонить маме</li>
+		<li>Покрасить кормушку для птиц</li>
+		<li>Поспать!</li>
+		<li>Проспать работу
+			<ul>
+				<li>Выключить первый будильник</li>
+				<li>Выключить второй будильник</li>
+				<li>Выключить третий будильник</li>
+				<li>Нервно вскочить с кровати</li>
+			</ul>
+		</li>
+	</ol>
+	<dl>
+		<dt>С</dt>
+		<dd>Собака</dd>
+		<dd>Суслик</dd>
+		<dd>Слово</dd>
+		<dt>У</dt>
+		<dd>Утконос</dd>
+		<dd>Улитка</dd>
+		<dt>Я</dt>
+		<dt>А</dt>
+		<dd>Апельсин</dd>
+	</dl>
+</body>
+</html>
